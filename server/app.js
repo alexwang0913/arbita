@@ -52,6 +52,8 @@ app.use(function(err, req, res, next) {
 
 const port = process.env.PORT || 5000;
 // app.listen(port);
-http.createServer(app).listen(port);
+// const serverUrl = '127.0.0.1';
+const serverUrl = '138.68.107.2';
+http.createServer(app).listen(port, serverUrl);
 
 logs.success('App running on http://localhost:{}', port)
