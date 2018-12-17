@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const cors = require('cors')
 const trunks = require('trunks-log')
 const app = express();
+const http = require('http');
 
 app.use(cors())
 const logs = new trunks('', 'yellow', '')
@@ -50,6 +51,7 @@ app.use(function(err, req, res, next) {
 });
 
 const port = process.env.PORT || 5000;
-app.listen(port);
+// app.listen(port);
+http.createServer(app).listen(port);
 
 logs.success('App running on http://localhost:{}', port)
