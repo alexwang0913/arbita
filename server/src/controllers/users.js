@@ -85,6 +85,7 @@ exports.update = async (req, res) => {
 }
 
 exports.login = async (req, res) => {
+  console.log('___________Login function');
   await User.find(req.body).exec()
   .then(user => {
     if (user.length > 0) {
