@@ -18,7 +18,7 @@ app.use(function(req, res, next) {
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
 
-    // Pass to next layer of middleware
+    // Pass to next layer of mddleware
     next();
 });
 // app.use(cors())
@@ -49,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', apiRoutes);
 
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -65,8 +66,8 @@ app.use(function(err, req, res, next) {
 
 const port = process.env.PORT || 3000;
 // app.listen(port);
-const serverUrl = '127.0.0.1';
-// const serverUrl = '138.68.107.2';
+// const serverUrl = '192.168.1.109';
+const serverUrl = '138.68.107.2';
 http.createServer(app).listen(port, serverUrl);
 
 logs.success('App running on http://localhost:{}', port)
