@@ -9,8 +9,6 @@ const userRoutes = require('./users') //use the user route shit
 
 const router = express.Router() //make a new router
 
-
-
 router.use('/users', userRoutes) //tell it to use the userRoutes
 
 module.exports = router
