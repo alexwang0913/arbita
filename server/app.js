@@ -64,10 +64,10 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 // app.listen(port);
 // const serverUrl = '192.168.1.109';
 const serverUrl = '138.68.107.2';
 http.createServer(app).listen(port, serverUrl);
 
-logs.success('App running on http://localhost:{}', port)
+logs.success('App running on http://{}:{}', serverUrl, port)
