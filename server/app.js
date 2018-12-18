@@ -64,7 +64,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 });
 
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3000;
 // app.listen(port);
 // const serverUrl = '192.168.1.109';
 const serverUrl = '138.68.107.2';
